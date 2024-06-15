@@ -503,15 +503,14 @@ const RegisterForm = () => {
         name: '',
         email: '',
         password: '',
-        country_code: '91', // Default country code
-        phone: '',
-        role: 'GUEST', // Default role
+        mobile: '',
+        role: 'GUEST', 
       }}
       validationSchema={YupObject({
         name: nameSchema,
         email: emailSchema,
         password: passwordSchema,
-        phone: phoneSchema,
+        mobile: phoneSchema,
       })}
       onSubmit={(values, { setSubmitting }) => {
         handleRegister.mutate(values, {
@@ -535,7 +534,7 @@ const RegisterForm = () => {
           />
           <Col xs='12'>
             <div className='country-input'>
-              <SearchableSelectInput
+              {/* <SearchableSelectInput
                 nameList={[
                   {
                     name: 'country_code',
@@ -547,11 +546,11 @@ const RegisterForm = () => {
                     },
                   },
                 ]}
-              />
+              /> */}
               <SimpleInputField
                 nameList={[
                   {
-                    name: 'phone',
+                    name: 'mobile',
                     type: 'number',
                     placeholder: t('EnterPhoneNumber'),
                     colclass: 'country-input-box',
