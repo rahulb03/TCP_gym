@@ -331,7 +331,7 @@ export const PROFILE_BASE_URL = 'http://localhost:4200/api/frontend/'
 
   export const LOGIN_API =  API_BASE_URL + 'auth/signin';
 
-  export const GET_JOB = API_BASE_URL + 'job?' ;
+  export const GET_JOB = API_BASE_URL + 'job' ;
 
 export const CATEGORY = API_BASE_URL + 'category' ;
 
@@ -348,3 +348,6 @@ export const STORAGE = {
 }
 
 export const userDetail = localStorage?.getItem(STORAGE?.userDetail) ? JSON.parse(localStorage?.getItem(STORAGE?.userDetail)) : {}
+
+
+export const JOB_TOKEN = `Bearer 73dbba824ffcd243a02794ada26d566eea7f7461515212a6bc3ae87873f5221e` ;
