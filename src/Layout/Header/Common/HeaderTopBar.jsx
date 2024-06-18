@@ -31,10 +31,10 @@ const HeaderTopBar = () => {
           <Col lg={3}>
             <ul className='about-list right-nav-about'>
               <li className='right-nav-list'>
-                <TopLanguage />
+                {/* <TopLanguage /> */}
               </li>
               <li className='right-nav-list'>
-                <HeaderCurrency />
+                {/* <HeaderCurrency /> */}
               </li>
             </ul>
           </Col>
