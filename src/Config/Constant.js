@@ -326,7 +326,7 @@ export const jobData = [
 
 // export const REGISTER_API = 'http://localhost:4200/api/frontend/auth/signup';
 
-  export const REGISTER_API =  API_BASE_URL + 'auth/signup';
+  export const REGISTER_API =  API_BASE_URL + 'auth/signup' ;
 
   export const LOGIN_API =  API_BASE_URL + 'auth/signin';
 

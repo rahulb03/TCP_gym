@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 
 export const YupObject = (schemaObject) => Yup.object().shape(schemaObject);
-
+export const roleSchema= Yup.string().oneOf(['GUEST']).required('Role is required') ;
 export const emailSchema = Yup.string().email("Enter Valid Email").required();
 export const passwordSchema = Yup.string().min(8, "Too Short!").max(20, "Too Long!").required();
 export const nameSchema = Yup.string().required();
