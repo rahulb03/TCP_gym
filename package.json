@@ -39,6 +39,7 @@
     "remixicon": "^3.5.0",
     "sass": "^1.63.4",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.11",
     "yup": "^0.32.11"
   }
 }

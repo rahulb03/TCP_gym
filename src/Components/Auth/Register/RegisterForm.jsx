@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 import axios from 'axios';
 import { useContext } from 'react';
 import { Form, Formik } from 'formik';
@@ -12,6 +12,7 @@ import { REGISTER_API } from '@/Config/Constant';
 import SimpleInputField from '@/Components/Common/InputFields/SimpleInputField';
 import { AllCountryCode } from '../../../../Data/AllCountryCode';
 import SearchableSelectInput from '@/Components/Common/InputFields/SearchableSelectInput';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 import { useRouter } from 'next/navigation';
 
@@ -21,6 +22,12 @@ const RegisterForm = () => {
   const { i18Lang } = useContext(I18NextContext);
   const { t } = useTranslation(i18Lang, 'common');
   const router = useRouter();
+  const [showPassword, setShowPassword] = useState(false);
+
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <Formik
      
@@ -112,10 +119,13 @@ const RegisterForm = () => {
                 nameList={[
                   {
                     name: 'password',
-                    type: 'password',
+                    type: showPassword ? 'text' : 'password',
+
                     placeholder: t('Password'),
                     title: 'password',
                     label: 'Password',
+                    onClick: toggleShowPassword,
+                    icon: showPassword ? <FaEye /> : <FaEyeSlash /> 
                   },
                 ]}
                 value={values.phone}
