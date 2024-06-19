@@ -11,7 +11,7 @@ import ConfirmationModal from "@/Components/Common/ConfirmationModal";
 import AccountContext from "@/Helper/AccountContext";
 import Avatar from "@/Components/Common/Avatar";
 import Cookies from 'js-cookie';
-import { FaUser } from "react-icons/fa";
+import { FaUser , FaLock, FaDoorOpen, FaSignInAlt, FaSignOutAlt, FaUserPlus} from "react-icons/fa";
 
 const HeaderProfile = () => {
   const { i18Lang } = useContext(I18NextContext);
@@ -67,22 +67,30 @@ const HeaderProfile = () => {
               </li>
               <li className="product-box-contain" onClick={() => setModal(true)}>
                 <a>
-                  <RiLogoutBoxRLine className="me-2" /> {t("Logout")}
+                  <FaSignOutAlt className="me-2" /> {t("Logout")}
                 </a>
               </li>
             </>
           ) : (
             <>
-              <li className="product-box-contain">
-                <Link href={`/${i18Lang}/auth/login`}>
-                  <RiUserLine className="me-2" /> {t("Login")}
-                </Link>
-              </li>
-              <li className="product-box-contain">
+
+            <li className="product-box-contain">
                 <Link href={`/${i18Lang}/auth/register`}>
                   <FaUser className="me-2" /> {t("Register")}
                 </Link>
               </li>
+
+              <li className="product-box-contain">
+                <Link href={`/${i18Lang}/auth/login`}>
+                  <FaSignInAlt className="me-2" /> {t("Login")}
+                </Link>
+              </li>
+
+              {/* <li className="product-box-contain">
+                <Link href={`/${i18Lang}/auth/register`}>
+                  <FaUser className="me-2" /> {t("Register")}
+                </Link>
+              </li> */}
             </>
           )}
           <ConfirmationModal

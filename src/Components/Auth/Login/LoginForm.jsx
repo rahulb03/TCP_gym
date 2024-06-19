@@ -1,6 +1,3 @@
-
-
-
 import React, { useContext, useState } from 'react';
 import { Formik, Form } from 'formik';
 import Link from 'next/link';
