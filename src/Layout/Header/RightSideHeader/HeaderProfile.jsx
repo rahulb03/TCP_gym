@@ -36,8 +36,8 @@ const HeaderProfile = () => {
 
   return (
     <li className="right-side onhover-dropdown">
-      <div className="delivery-login-box">
-        <div className="delivery-icon">
+      {/* <div className="delivery-login-box"> */}
+        {/* <div className="delivery-icon">
           {accountData?.profile_image?.original_url ? (
             <Avatar
               data={accountData.profile_image.original_url}
@@ -47,14 +47,14 @@ const HeaderProfile = () => {
           ) : (
             <h3> </h3>
           )}
-        </div>
+        </div> */}
         <div className="delivery-detail">
           <h6>
             {t("Hi")}, {accountData?.name ?? t("User")}
           </h6>
           <h5>{t("MyAccount")}</h5>
         </div>
-      </div>
+      
 
       <div className="onhover-div onhover-div-login">
         <ul className="user-box-name">

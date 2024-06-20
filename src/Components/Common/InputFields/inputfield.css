@@ -17,13 +17,16 @@
   align-items: center;
   justify-content: center;
   margin-right: 20px;
+  /* margin-bottom:20px; */
 }
 
 .icon-container .fa-eye,
 .icon-container .fa-eye-slash {
   color: #6c757d; /* Change this to your desired icon color */
+  font-size: 30px !important;
 }
 
 
 icon{
+  size: 30px;
 }
