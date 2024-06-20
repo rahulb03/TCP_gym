@@ -14,8 +14,7 @@ import { userDetail } from '@/Config/Constant';
 const DashboardContent = () => {
   const { i18Lang } = useContext(I18NextContext);
   const { t } = useTranslation(i18Lang, 'common');
-  // const { accountData } = useContext(AccountContext);
-  const accountData = userDetail;
+  const { accountData } = useContext(AccountContext);
   
   
   return (
@@ -23,7 +22,7 @@ const DashboardContent = () => {
       <AccountHeading title="MyDashboard" /> 
       <div className='dashboard-user-name'>
         <h6 className='text-content'>
-          {t('Hello')}, <b className='text-title'>{userDetail?.name ?? t('User')}</b>
+          {t('Hello')}, <b className='text-title'>{accountData?.name ?? t('User')}</b>
         </h6>
         <p className='text-content'>{t("DashboardDescription")}</p>
       </div>
